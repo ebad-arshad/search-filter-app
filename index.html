@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c42ed3031b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div>
+
+            <select onchange="selectOption()" id="options">
+                <option>Select Mobile</option>
+            </select>
+            <div class="input-field">
+                <input disabled id="input" onkeyup="letterPressed()" onfocus="showList()" onblur="hideList()"
+                    placeholder="Enter Model" type="text">
+                <div onclick="searched()" id="search-icon">
+                    <i class="search fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="hide search-list">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main">
+    </div>
+
+    <div class="hidden result">
+        <div class="heading">
+            <h3>RESULTS</h3>
+        </div>
+        <div id="results-card">
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
